@@ -5,7 +5,7 @@ $SourcePath = 'https://raw.githubusercontent.com/michaelfolin/O365MasterClass/ma
 $LabFilesSource = "{0}{1}.zip" -f $SourcePath,$env:COMPUTERNAME
 # Install mandatory features on all machines
 $AdminUsername = 'corp\sysadmin'
-$AdminPassword = (ConvertTo-SecureString -AsPlainText 'Pa$$w0rd' -Force)
+$AdminPassword = (ConvertTo-SecureString -AsPlainText 'AA11AAss' -Force)
 $Credentials = (New-Object System.Management.Automation.PSCredential -ArgumentList $AdminUsername, $AdminPassword)
 
 Add-WindowsFeature Telnet-Client
@@ -139,7 +139,7 @@ function Invoke-Win10VDIOpt {
 
     $RDPEnable = 1
     $RDPFirewallOpen = 1
-    $NLAEnable = 1
+    $NLAEnable = 0
 
 
     # Set up additional registry drives:
